@@ -440,8 +440,37 @@ class LogicController extends Controller
               
           Mail::bcc($user->email)->send(new NewNotification($objDemo));
           
-        return redirect()->back()
-        ->with('message', 'Action Sucessful!');
+          return redirect()->back()
+          ->with('message', 'Action Sucessful!');
+        }
+
+       //process withdrawals
+       public function decwithdrawal($id){
+  
+        $withdrawal=withdrawals::where('id',$id)->first();
+        $user=users::where('id',$withdrawal->user)->first();
+
+        users::where('id',$user->id)->update([
+          'account_bal' => $user->account_bal+$withdrawal->amount,
+        ]);
+
+        withdrawals::where('id',$id)->update([
+          'status' => 'Cancelled',
+        ]);
+        
+        $settings=settings::where('id', '=', '1')->first();
+          
+          //send email notification
+          $objDemo = new \stdClass();
+          $objDemo->message = "This is to inform you that your withdrawal $settings->currency$withdrawal->amount was declined";
+          $objDemo->sender = $settings->site_name;
+          $objDemo->subject ="Withdrawal Declined";
+          $objDemo->date = \Carbon\Carbon::Now();
+              
+          Mail::bcc($user->email)->send(new NewNotification($objDemo));
+          
+          return redirect()->back()
+          ->with('message', 'Action Sucessful!');
         }
   
   
