@@ -455,7 +455,7 @@ class LogicController extends Controller
         ]);
 
         withdrawals::where('id',$id)->update([
-          'status' => 'Cancelled',
+          'status' => 'Declined',
         ]);
         
         $settings=settings::where('id', '=', '1')->first();
