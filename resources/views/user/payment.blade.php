@@ -172,7 +172,7 @@
 
 										<script>
 											function myFunction(address,query_url) {
-												navigator.clipboard.writeText("{{$settings->btc_address}}").then(function () {
+												navigator.clipboard.writeText("{{$address}}").then(function () {
 													new Notify ({
 														status: 'success',
 														title: 'Copied',
@@ -187,7 +187,7 @@
 											}
 
 											var addressCopied = function () {
-												navigator.clipboard.writeText("{{$settings->btc_address}}");
+												navigator.clipboard.writeText("{{$address}}");
 												new Notify ({
 													status: 'success',
 													title: 'Copied',
