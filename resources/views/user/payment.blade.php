@@ -109,53 +109,93 @@
 														<a href="{{ url('dashboard/cpay') }}/{{$amount}}/BTC/{{ Auth::user()->id }}/new" class="btn btn-{{$text}}">Automatic payment method</a>
 														@endif
 														</h4>
-														<button onclick="myFunction('https://buy.bitcoin.com/')" class="btn btn-{{$text}}" style="margin-top:2px">
+														<button onclick="myFunction(`{{$settings->btc_address}}`,'https://buy.bitcoin.com/')" class="btn btn-{{$text}}" style="margin-top:2px">
 															Bitcoin.com 
 															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 														</button>
-														<button onclick="myFunction('https://www.coinmama.com/bitcoin')" class="btn btn-{{$text}}" style="margin-top:2px">
+														<button onclick="myFunction(`{{$settings->btc_address}}`,'https://www.coinmama.com/bitcoin')" class="btn btn-{{$text}}" style="margin-top:2px">
 															Coinmama 
 															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 														</button>
-														<button onclick="myFunction('https://payments.changelly.com/?crypto=BTC&fiat=USD&amount=600&_ga=2.255053128.1529199607.1557239996-980779177.1557239996')" class="btn btn-{{$text}}" style="margin-top:2px" >
+														<button onclick="myFunction(`{{$settings->btc_address}}`,'https://payments.changelly.com/?crypto=BTC&fiat=USD&amount=600&_ga=2.255053128.1529199607.1557239996-980779177.1557239996')" class="btn btn-{{$text}}" style="margin-top:2px" >
 															Changely
 															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 														</button>
-														<button onclick="myFunction('https://paxful.com/')" class="btn btn-{{$text}}" style="margin-top:2px" >
+														<button onclick="myFunction(`{{$settings->btc_address}}`,'https://paxful.com/')" class="btn btn-{{$text}}" style="margin-top:2px" >
 															Paxful
 															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 														</button>
-												 		<script>
-														   function myFunction(query_url) {
-                                                              navigator.clipboard.writeText("{{$settings->btc_address}}").then(function () {
-																	new Notify ({
-																		status: 'success',
-																		title: 'BTC Address Copied',
-																		text: '{{$settings->btc_address}}',
-																		autoclose: true,
-																		effect: 'slide',
-																	});
-                                                                    location.href = query_url;
-                                                                }, function () {
-                                                                    location.href = query_url;
-                                                                });
-                                                            }
-
-															var addressCopied = function () {
-																navigator.clipboard.writeText("{{$settings->btc_address}}");
-																new Notify ({
-																	status: 'success',
-																	title: 'Copied',
-																	autoclose: true
-																})
-															};
-							
-														</script>
 														
 													</div>
 												</div>
 											</div>
 										</div>
+										<div class="card bg-{{$bg}} shadow text-{{$text}}">
+											<div class="card-body">
+												<h4>
+													<strong>USDT</strong>
+													<img src="{{ asset('home/images/usdt.png')}}" width="40px;" height="40px;">
+													</a>
+												</h4>
+												<div id="btc" class="panel-collapse show">
+													<div class="bg-{{$bg}}">
+														<h4 class="text-{{$text}}">
+														<strong>USDT (TRC20):</strong> {{$settings->usdt_address}} 
+														<!-- <br><img src="{{ asset('home/images/btc_barcode.png')}}" width="200px;"> -->
+														<br/><br/>
+														@if($settings->withdrawal_option != "manual")
+														<a href="{{ url('dashboard/cpay') }}/{{$amount}}/BTC/{{ Auth::user()->id }}/new" class="btn btn-{{$text}}">Automatic payment method</a>
+														@endif
+														</h4>
+														<button onclick="myFunction(`{{$settings->usdt_address}}`,'https://buy.bitcoin.com/')" class="btn btn-{{$text}}" style="margin-top:2px">
+															Bitcoin.com 
+															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+														</button>
+														<button onclick="myFunction(`{{$settings->usdt_address}}`,'https://www.coinmama.com/bitcoin')" class="btn btn-{{$text}}" style="margin-top:2px">
+															Coinmama 
+															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+														</button>
+														<button onclick="myFunction(`{{$settings->usdt_address}}`,'https://payments.changelly.com/?crypto=BTC&fiat=USD&amount=600&_ga=2.255053128.1529199607.1557239996-980779177.1557239996')" class="btn btn-{{$text}}" style="margin-top:2px" >
+															Changely
+															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+														</button>
+														<button onclick="myFunction(`{{$settings->usdt_address}}`,'https://paxful.com/')" class="btn btn-{{$text}}" style="margin-top:2px" >
+															Paxful
+															<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16px" width="16px" viewBox="0 0 24 24" class="sc-16r8icm-0 coGWQa"><path d="M5.7 14.7H4.8C4.32261 14.7 3.86477 14.5104 3.52721 14.1728C3.18964 13.8352 3 13.3774 3 12.9V4.8C3 4.32261 3.18964 3.86477 3.52721 3.52721C3.86477 3.18964 4.32261 3 4.8 3H12.9C13.3774 3 13.8352 3.18964 14.1728 3.52721C14.5104 3.86477 14.7 4.32261 14.7 4.8V5.7M11.1 9.3H19.2C20.1941 9.3 21 10.1059 21 11.1V19.2C21 20.1941 20.1941 21 19.2 21H11.1C10.1059 21 9.3 20.1941 9.3 19.2V11.1C9.3 10.1059 10.1059 9.3 11.1 9.3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+														</button>
+												 		
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<script>
+											function myFunction(address,query_url) {
+												navigator.clipboard.writeText("{{$settings->btc_address}}").then(function () {
+													new Notify ({
+														status: 'success',
+														title: 'Copied',
+														text: '{{$address}}',
+														autoclose: true,
+														effect: 'slide',
+													});
+													location.href = query_url;
+												}, function () {
+													location.href = query_url;
+												});
+											}
+
+											var addressCopied = function () {
+												navigator.clipboard.writeText("{{$settings->btc_address}}");
+												new Notify ({
+													status: 'success',
+													title: 'Copied',
+													autoclose: true
+												})
+											};
+			
+										</script>
 									</div>
 									@endif
 									@if($pmode==3)
