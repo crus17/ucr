@@ -359,6 +359,7 @@ public function updatemark(Request $request){
     'whatsapp'=>$request['whatsapp'],
     'account_name'=>$request['account_name'],
     'account_number'=>$request['account_number'],
+    'usdt_address'=>$request['usdt_address'],
     'btc_address'=>$request['btc_address'],
     ]);
     return redirect()->back()

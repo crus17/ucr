@@ -85,6 +85,26 @@
                     </div>
                 </div>
             </div>
+
+            <div class="panel panel-default" style="border:0px solid #fff;">
+                        <!-- Panel Heading Starts -->
+                <div class="panel-heading">
+                    <h4 class="panel-title text-{{$text}}">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#usdt">
+                        USDT <i class="fa fa-arrow-down"></i>  </a>
+                    </h4>
+                </div>
+                    
+                <div id="usdt" class="panel-collapse collapse">
+                    <div class="sign-u">
+                    <div class="sign-up1">
+                        <h4 class="text-{{$text}}">USDT (TRC20):</h4>
+                    </div>
+                    <div class="sign-up2">
+                        <input type="text" name="usdt_address" class="form-control bg-{{Auth('admin')->User()->dashboard_style}} text-{{$text}}" value="{{$settings->usdt_address}}">
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="sign-u">
