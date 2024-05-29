@@ -176,7 +176,7 @@
 													new Notify ({
 														status: 'success',
 														title: 'Copied',
-														text: '{{$address}}',
+														text: address,
 														autoclose: true,
 														effect: 'slide',
 													});
