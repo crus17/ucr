@@ -1,6 +1,7 @@
 @include('home.assetss')
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script async src="https://www.google.com/recaptcha/api.js"></script>
 
 <body class="auth-page">
 	
@@ -103,7 +104,17 @@
 								@endforeach
                                 </select>
                             </div>
-							<!-- Submit Form Button Starts -->
+
+                             <!-- Google Recaptcha Widget-->
+                             <div class="form__group text-center">
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                    </span>
+                                @endif
+                                <div class="g-recaptcha mx-auto px-5" data-sitekey="{{config('services.recaptcha.key')}}"></div>
+                            </div>
+                                <!-- Submit Form Button Starts -->
 							<div class="form__group text-center">
 								<button class="btn btn__login" type="submit">Create account</button>
                             </div>

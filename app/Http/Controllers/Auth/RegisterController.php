@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Rules\Recaptcha;
 
 use App\Mail\NewRegistration;
 use Illuminate\Support\Facades\Mail;
@@ -69,7 +70,9 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'phone' => 'required|string|max:15',
+            'g-recaptcha-response' =>['required', new Recaptcha()],
         ]);
+        
     }
 
     /**
