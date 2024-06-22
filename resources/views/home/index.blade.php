@@ -1111,117 +1111,205 @@
                                     <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingOne1">
-                                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                        <div class="card-header" role="tab" id="heading1">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                                 <h5 class="mb-0">
-                                                    When would I be able to see my balance? <i class="fas fa-caret-down rotate-icon"></i>
+                                                    What is {{$settings->site_name}}? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                        <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1" data-parent="#accordionEx">
                                             <div class="card-body">
-                                               You can see your balance on your dashboard as each time according to your duration or lenght of investment day, most most likely after every 24 hours
+                                               {{$settings->site_name}} is a cryptocurrency trading platform that specializes in strategic investments across various crypto assets, including early-stage projects, seed and presale rounds, low-cap and high-cap utility coins, and meme coins.
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Accordion card -->
-                                    <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingTwo2">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                        <div class="card-header" role="tab" id="heading2">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                                 <h5 class="mb-0">
-                                                    Is it possible for the citizens or residents of the US to participate in the Token Sale on your plateform
+                                                    How do I register on {{$settings->site_name}}? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+                                        <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2" data-parent="#accordionEx">
                                             <div class="card-body">
-                                              Everyone from every city, country and nation are welcome on our plateform there are restrictions to visitor, but all user are adviced to follow the nessecary guideline to able to maintain continuity
+                                               To register, <a href="register"> visit our registration page</a>, fill out the required information, and verify your account. The process is quick and straightforward.
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Accordion card -->
-                                    <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingThree3">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                        <div class="card-header" role="tab" id="heading3">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                                 <h5 class="mb-0">
                                                     Is there a KYC process involved? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+                                        <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3" data-parent="#accordionEx">
                                             <div class="card-body">
                                                KYC  are regulation needed for verification and to ensure no user is automating the process of investment there fore whenever the arises you may be required to submit perosnal information to verify you identifity only when needed.
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Accordion card -->
-                                    <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingFour4">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                                        <div class="card-header" role="tab" id="heading4">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                                 <h5 class="mb-0">
-                                                    What will happen to the un withdrawn balance ? <i class="fas fa-caret-down rotate-icon"></i>
+                                                    How can I deposit funds into my {{$settings->site_name}} wallet? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
+                                        <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="heading4" data-parent="#accordionEx">
                                             <div class="card-body">
-                                                Un-withdrawn balance are left in your dashbaord until anytime you are ready to withdraw them
+                                                You can deposit funds using various methods such as bank transfer, credit/debit card, or cryptocurrency transfer. 
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Accordion card -->
-                                    <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingFive5">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFive5" aria-expanded="false" aria-controls="collapseFive5">
+                                        <div class="card-header" role="tab" id="heading5">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                                 <h5 class="mb-0">
-                                                    Which cryptocurrencies can I use to participate in Investment? <i class="fas fa-caret-down rotate-icon"></i>
+                                                    What investment plans are available? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseFive5" class="collapse" role="tabpanel" aria-labelledby="headingFive5" data-parent="#accordionEx">
+                                        <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5" data-parent="#accordionEx">
                                             <div class="card-body">
-                                               The default Crypto currency need for investment in {{$settings->site_name}} is the bitcoin currency.
+                                               We offer five investment plans, each with specific minimum and maximum investment amounts and interest rates. Details of each plan are available on our <a href="plans">investment plans page</a>.
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Accordion card -->
-                                    <!-- Accordion card -->
                                     <div class="card">
                                         <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingSix6">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseSix6" aria-expanded="false" aria-controls="collapseSix6">
+                                        <div class="card-header" role="tab" id="heading6">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                                 <h5 class="mb-0">
-                                                    Are there any restrictions that involve a minimum or a maximum transaction limit? <i class="fas fa-caret-down rotate-icon"></i>
+                                                    How do I earn interest on my investments? <i class="fas fa-caret-down rotate-icon"></i>
                                                 </h5>
                                             </a>
                                         </div>
                                         <!-- Card body -->
-                                        <div id="collapseSix6" class="collapse" role="tabpanel" aria-labelledby="headingSix6" data-parent="#accordionEx">
+                                        <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx">
                                             <div class="card-body">
-                                                No retriction are involved here on our plateform only except when notified by email
+                                               Once you choose and invest in a plan, you will start earning daily interest, which is automatically added to your {{$settings->site_name}} wallet.
                                             </div>
                                         </div>
                                     </div>
-    
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading7">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                                <h5 class="mb-0">
+                                                    Can I withdraw my earnings anytime? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collapse7" class="collapse" role="tabpanel" aria-labelledby="heading7" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               Yes, you can withdraw the daily interest earnings at any time. However, the initial capital is locked until the completion of the investment plan’s duration.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading8">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                                <h5 class="mb-0">
+                                                    What happens at the end of my investment plan's duration? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collapse8" class="collapse" role="tabpanel" aria-labelledby="heading8" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               Upon completion of your investment plan’s duration, your initial capital will be released back to your {{$settings->site_name}} wallet, ready for withdrawal or reinvestment.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading9">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collaps9" aria-expanded="false" aria-controls="collaps9">
+                                                <h5 class="mb-0">
+                                                    Is my investment safe with {{$settings->site_name}}? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collaps9" class="collapse" role="tabpanel" aria-labelledby="heading9" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               We prioritize the security of your investments through careful selection of investment opportunities and rigorous due diligence. However, as with any investment, there are inherent risks in the cryptocurrency market.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading10">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                                <h5 class="mb-0">
+                                                    How do I learn more about cryptocurrency and blockchain? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collapse10" class="collapse" role="tabpanel" aria-labelledby="heading10" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               We provide regular educational newsletters that cover a wide range of topics, from basic blockchain concepts to advanced investment strategies. Our resources are designed to help you become a confident and informed investor.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading11">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                                <h5 class="mb-0">
+                                                    What is the Executive Investment Plan? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collapse11" class="collapse" role="tabpanel" aria-labelledby="heading11" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               The Executive Investment Plan includes exclusive benefits such as an insider newsletter with weekly analyses of crypto assets and upcoming projects, valued at $500/month. It offers deeper insights into our investment strategies and market outlook.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <!-- Card header -->
+                                        <div class="card-header" role="tab" id="heading12">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                                <h5 class="mb-0">
+                                                    How can I contact {{$settings->site_name}} for support? <i class="fas fa-caret-down rotate-icon"></i>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <!-- Card body -->
+                                        <div id="collapse12" class="collapse" role="tabpanel" aria-labelledby="heading12" data-parent="#accordionEx">
+                                            <div class="card-body">
+                                               You can reach out to our support team via email at <a href="mailto:{{$settings->contact_email}}">{{$settings->contact_email}}</a> or through our live chat feature on the website. We are here to assist you with any questions or issues.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- Accordion wrapper -->
                             </div>
                         </div>
                     </div>
                 </div>
+                    
+
                 <!-- FAQ Section end--> 
                 <!-- Brand logo slider -->
                 <div class="brand-logo-slider c-l p-tb white-sec">

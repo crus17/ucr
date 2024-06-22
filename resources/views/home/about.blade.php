@@ -65,7 +65,7 @@
 		   <div class="container">
 				<div class="row"> 
                     <div class="col-sm-6 col-md-4 logo">
-                        <a href="#" title="{{$settings->site_name}}" >
+                        <a href="/" title="{{$settings->site_name}}" >
                             <img class="dark" src="{{ asset ('home/logo-1.png') }}" width="120" alt="{{$settings->site_name}} ">
                         </a>
                     </div>
