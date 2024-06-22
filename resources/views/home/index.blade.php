@@ -202,7 +202,7 @@
                                 </h5>
                                 <p> We welcome you to the digital world of crypto investment and online trading where our clients will receive stable and risk-free long-term returns by placing their Bitcoin asset in our online profound asset management program. </p>
                                 <div class="button-wrapper">
-                                    <a class="btn" href="#">Read More</a>
+                                    <a class="btn" href="about">Read More</a>
                                 </div>
                             
                             </div>
